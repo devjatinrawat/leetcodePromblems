@@ -11,33 +11,29 @@ you have to return a vector
 https://linuxhint.com/print-vector-cpp/
 */
 
-
-
 // class Solution {
 // public:
-//     vector<int> buildArray(vector<int>& nums) 
-//     // Already you have a vector passed as a reference 
+//     vector<int> buildArray(vector<int>& nums)
+//     // Already you have a vector passed as a reference means already you have a vector
 //     {
-        
-//         // Creating A Vector Ans 
+
+//         // Creating A Vector Ans
 //         vector<int> ans;
-        
-//         // traversing the vector 
+
+//         // traversing the vector
 //         for (int i = 0 ;  i < nums.size() ; i++) {
-            
-//             // pushing values to my new vector 
+
+//             // pushing values to my new vector
 //             ans.push_back(nums[nums[i]]);
 //         }
 //         return ans;
-        
+
 //         // returning the new vector
 //     }
 // };
 
-
 // Space Complexity: O(N) todo
 // Time Complexity: O(N)
-
 
 //  Printing elements using for loop
 
@@ -64,9 +60,7 @@ https://linuxhint.com/print-vector-cpp/
 //     }
 // }
 
-
 // Using the push_back() Method to Push Values Into the Vector ( input)
-
 
 // #include <iostream>
 
@@ -77,8 +71,7 @@ https://linuxhint.com/print-vector-cpp/
 // int main()
 // {
 
-
-// // create my vector 
+// // create my vector
 //     vector<int> v ;
 
 // //pushback
@@ -88,7 +81,7 @@ https://linuxhint.com/print-vector-cpp/
 
 // //statement
 // cout<<"My Vector is : ";
-// // print my vector 
+// // print my vector
 // for( int i = 0 ; i < 3 ; i++){
 //     cout<<v[i]<<" ";
 // }
@@ -96,11 +89,11 @@ https://linuxhint.com/print-vector-cpp/
 
 // }
 
-// Data member functions == Data member Methods == member Fucntions == Methods == Class ke Functions 
-//Methods are functions that belongs to the class , method is a special type of function that is attached to a object , is really similar to hip-hop and music like hip-hop is a type of music but it's not entirely music
-// All Are Same 
+// Data member functions == Data member Methods == member Fucntions == Methods == Class ke Functions
+// Methods are functions that belongs to the class , method is a special type of function that is attached to a object , is really similar to hip-hop and music like hip-hop is a type of music but it's not entirely music
+// All Are Same
 
-// User defined Vector 
+// User defined Vector
 
 // #include<iostream>
 // #include<vector>
@@ -116,7 +109,6 @@ https://linuxhint.com/print-vector-cpp/
 //     cout<<endl;
 // }
 
-
 // int main(){
 
 // // Declared my vector , size , element
@@ -126,7 +118,6 @@ https://linuxhint.com/print-vector-cpp/
 // // Asking User
 // cout<<"Enter The Size Of The VEctor : "<<endl;
 // cin>>size;
-
 
 // // input array elements
 
@@ -144,3 +135,75 @@ https://linuxhint.com/print-vector-cpp/
 
 // return 0;
 // }
+
+// Lets Start
+
+// #include <iostream>
+
+// #include <vector>
+
+// using namespace std;
+
+// int main()
+// {
+
+//     int nums[6] = {0, 2, 1, 5, 3, 4};
+
+//     int ans[6];
+
+//     // lets traverse baby
+//     for (int i = 0; i < 6; i++)
+//     {
+//         ans[i] = nums[nums[i]];
+//     }
+
+//     cout << "The Output array is : " << endl;
+
+//     // For outputting Array
+
+//     for (int i = 0; i < 6; i++)
+//     {
+//         cout << ans[i] << " ";
+//     }
+
+//     return 0;
+// }
+
+// class Solution {
+// public:
+//     vector<int> buildArray(vector<int>& nums) {
+        
+//         //lets create a vector 
+//         vector<int> ans;
+        
+//         //let traverse and update nums[nums[i]] to ans
+        
+//         for( int i = 0 ; i < nums.size(); i++){
+//            ans.push_back(nums[nums[i]]);
+//         }
+//         return ans;
+//     }
+// };
+
+
+//Error : Why am I getting this runtime error? Line 1034: Char 9: runtime error: reference binding to null pointer of type 'int' == There are no values in ans
+
+
+/* Final Solution */
+// class Solution {
+// public:
+//     vector<int> buildArray(vector<int>& nums) {
+        
+//         //lets create a vector 
+//         vector<int> ans;
+        
+//         //let traverse and update nums[nums[i]] to ans : add elements or update using push_back
+        
+//         for( int i = 0 ; i < nums.size(); i++){
+//            ans.push_back(nums[nums[i]]);
+            
+//            // ans[i] = nums[nums[i]]; 
+//         }
+//         return ans;
+//     }
+// };
